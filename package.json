@@ -38,11 +38,19 @@
   },
   "main": "dist-electron/main.js",
   "build": {
-  "appId": "com.yourcompany.yourapp",
-  "productName": "YourApp",
-  "directories": {
-    "output": "build"
+    "appId": "dream-browser.app",
+    "productName": "Dream",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "icon": "/logos/logo-text.jpg"
+    },
+    "mac": {
+      "icon": "/logos/logo-text.jpg"
+    },
+    "linux": {
+      "icon": "/logos/logo-text.jpg"
+    }
   }
-}
-
 }
