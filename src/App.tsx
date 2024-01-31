@@ -1,11 +1,23 @@
+import { useEffect } from "react";
+import { useGlobalStates } from "./states";
+import { ITab } from "./types/tab";
 import { Header } from "./components/Header";
-import { Homepage } from "./components/Homepage";
+import { WebPage } from "./components/WebPage";
 
 function App() {
+  const { tabs, addTab, setCurrentTab } = useGlobalStates();
+  useEffect(() => {
+    if (!tabs.length) {
+      const newTab: ITab = { id: 1, title: "New Tab", favicon: "" };
+      addTab(newTab);
+      setCurrentTab(newTab);
+    }
+  }, [tabs, addTab, setCurrentTab]);
+
   return (
     <div className="h-screen flex flex-col">
       <Header />
-      <Homepage />
+      <WebPage />
     </div>
   );
 }

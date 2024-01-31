@@ -10,7 +10,7 @@ import { HomeButton } from "./HomeButton";
 
 export function ToolBar() {
   return (
-    <div className="grid grid-cols-12 py-2 px-4 bg-stone-800">
+    <div className="grid grid-cols-12 py-2 px-4 bg-main-2">
       <div className="flex items-center gap-6 col-span-2">
         <button>
           <ArrowLeftIcon className="h-5 w-5" />

@@ -7,7 +7,7 @@ interface SearchBoxProps {
 }
 
 export function SearchBox({ className }: SearchBoxProps) {
-  className ||= "rounded-sm w-full bg-slate-900 px-4 py-1 outline-none text-sm";
+  className ||= "rounded-md w-full bg-main-4 px-4 py-2 outline-none text-sm";
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { setViewSrc } = useGlobalStates();
 
