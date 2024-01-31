@@ -2,6 +2,7 @@ import { useTabs } from "@/states/tabs";
 import { ITab } from "@/types/tab";
 import { classNames } from "@/utils/style";
 import { Cross1Icon } from "@radix-ui/react-icons";
+import { ShowWhen } from "../ShowWhen";
 
 interface TabProps {
   tabData: ITab;
@@ -10,20 +11,26 @@ interface TabProps {
 
 export function Tab({ tabData, active }: TabProps) {
   const { favicon, title } = tabData;
-  const { tabs, setTabs, setCurrentTab } = useTabs();
+  const { tabs, setTabs, setCurrentTab, currentTab } = useTabs();
+  const isCurrentTab = tabData.id === currentTab?.id;
 
   const closeTab = () => {
     const newTabs = [];
+    let newCurrentTab = tabs.at(0);
 
     for (const tab of tabs) {
       if (tab.id !== tabData.id) {
         newTabs.push(tab);
-      } else if (tab.id === tabData.id - 1) {
-        setCurrentTab(tab);
+      } else if (tab.id === tabData.id - 1 || tab.id === tabData.id + 1) {
+        console.log(tab);
+        newCurrentTab = tab;
       }
     }
 
     setTabs(newTabs);
+    if (newCurrentTab) {
+      setCurrentTab(newCurrentTab);
+    }
   };
 
   const switchTab = () => setCurrentTab(tabData);
@@ -39,13 +46,18 @@ export function Tab({ tabData, active }: TabProps) {
       <span className="ml-7">{title}</span>
 
       <img
-        src={favicon || "/logos/logo.JPG"}
+        src={favicon || "/logos/logo.jpg"}
         className="absolute top-1/2 left-1 -translate-y-1/2 h-[75%] rounded-full"
       />
 
-      <button className="ml-auto" onClick={closeTab}>
-        <Cross1Icon className="h-3 w-3" />
-      </button>
+      <ShowWhen
+        show={
+          <button className="ml-auto" onClick={closeTab}>
+            <Cross1Icon className="h-3 w-3" />
+          </button>
+        }
+        when={isCurrentTab}
+      />
     </button>
   );
 }

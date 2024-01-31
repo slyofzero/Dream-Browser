@@ -7,6 +7,7 @@ import {
 } from "@radix-ui/react-icons";
 import { SearchBox } from "@/components/SearchBox";
 import { HomeButton } from "./HomeButton";
+import { AiChat } from "@/components/AiChat";
 
 export function ToolBar() {
   return (
@@ -32,17 +33,18 @@ export function ToolBar() {
       </div>
 
       <div className="flex items-center justify-end gap-6 col-span-2">
-        <div id="fave" className="mdl-cell mdl-cell--1-col button-size">
-          <button className="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
-            <BookmarkIcon className="h-4 w-4" />
-          </button>
-        </div>
+        <AiChat />
 
-        <div className="mdl-cell mdl-cell--1-col button-size">
-          <button
-            className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-            id="hdrbtn"
-          >
+        <button>
+          <img src="/logos/logo-transparent.png" alt="logo" className="w-8" draggable={false} />
+        </button>
+
+        <button className="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+          <BookmarkIcon className="h-4 w-4" />
+        </button>
+
+        <div className="flex items-center">
+          <button id="hdrbtn">
             <DotsVerticalIcon className="h-4 w-4" />
           </button>
           {/* <ul

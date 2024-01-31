@@ -1,3 +1,4 @@
+import { AIChatI } from "@/types/aiChat";
 import { ShortcutI } from "@/types/shortcut";
 
 export const urlRegex = /^https?:\/\//;
@@ -35,5 +36,18 @@ export const shortCuts: ShortcutI[] = [
   {
     title: "Amazon",
     image: "/shortcuts/amazon.png",
+  },
+];
+
+export const aiChat: AIChatI[] = [
+  {
+    from: "user",
+    text: "Hi!",
+    image: "/chat/user.jpg",
+  },
+  {
+    from: "ai",
+    text: "Hello! I'm your AI chatbot assistant here to help you. Feel free to ask me anything, and I'll do my best to provide you with useful information and assistance.",
+    image: "/chat/chatbot.png",
   },
 ];
