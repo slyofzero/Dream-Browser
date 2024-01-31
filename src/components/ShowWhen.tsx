@@ -1,6 +1,6 @@
 interface IShowWhen {
   show: React.ReactNode;
-  when: boolean | string | number;
+  when: boolean | string | number | null | undefined;
   otherwise?: React.ReactNode;
 }
 
