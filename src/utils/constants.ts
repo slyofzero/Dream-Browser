@@ -5,37 +5,29 @@ export const urlRegex = /^https?:\/\//;
 
 export const shortCuts: ShortcutI[] = [
   {
-    title: "YouTube",
-    image: "/shortcuts/youtube.png",
-    pinned: true,
-  },
-  {
-    title: "Instagram",
-    image: "/shortcuts/instagram.png",
-  },
-  {
     title: "X",
     image: "/shortcuts/twitter.png",
+    pinned: true,
   },
   {
     title: "Telegram",
     image: "/shortcuts/telegram.png",
   },
   {
-    title: "ChatGPT",
-    image: "/shortcuts/chat-gpt.png",
+    title: "DexTools",
+    image: "/shortcuts/dextools.svg",
   },
   {
-    title: "IMDB",
-    image: "/shortcuts/imdb.png",
+    title: "Amazon",
+    image: "/shortcuts/amazon.png",
   },
   {
     title: "Binance",
     image: "/shortcuts/binance.png",
   },
   {
-    title: "Amazon",
-    image: "/shortcuts/amazon.png",
+    title: "Metamask",
+    image: "/shortcuts/metamask.png",
   },
 ];
 
@@ -47,7 +39,7 @@ export const aiChat: AIChatI[] = [
   },
   {
     from: "ai",
-    text: "Hello! I'm your AI chatbot assistant here to help you. Feel free to ask me anything, and I'll do my best to provide you with useful information and assistance.",
+    text: "Hello! I am DreamAI,  your AI chatbot assistant here to help you. Feel free to ask me anything, and I'll do my best to provide you with useful information and assistance.",
     image: "/chat/chatbot.png",
   },
 ];

@@ -46,7 +46,7 @@ export function Tab({ tabData, active }: TabProps) {
       <span className="ml-7">{title}</span>
 
       <img
-        src={favicon || "/logos/logo.jpg"}
+        src={favicon || "/logos/logo-colored.jpg"}
         className="absolute top-1/2 left-1 -translate-y-1/2 h-[75%] rounded-full"
       />
 

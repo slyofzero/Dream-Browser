@@ -10,7 +10,7 @@ export function AiChat() {
 
   const chat = (
     <div className="z-10 h-96 w-72 absolute top-16 right-40 bg-main-3/80 backdrop-blur rounded-md p-4 flex flex-col text-xs gap-4 justify-between">
-      <h1 className="mx-auto">AI Assistant</h1>
+      <h1 className="mx-auto select-none">DreamAI</h1>
 
       <div className="flex flex-col gap-4">
         {aiChat.map((message) => (

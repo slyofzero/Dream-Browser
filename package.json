@@ -41,16 +41,16 @@
     "appId": "dream-browser.app",
     "productName": "Dream",
     "directories": {
-      "output": "build"
+      "output": "dist"
     },
     "win": {
-      "icon": "/logos/logo-text.jpg"
+      "icon": "public/logos/logo-colored.jpg"
     },
     "mac": {
-      "icon": "/logos/logo-text.jpg"
+      "icon": "public/logos/logo-colored.jpg"
     },
     "linux": {
-      "icon": "/logos/logo-text.jpg"
+      "icon": "public/logos/logo-colored.jpg"
     }
   }
 }
