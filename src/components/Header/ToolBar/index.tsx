@@ -36,7 +36,7 @@ export function ToolBar() {
         <AiChat />
 
         <button>
-          <img src="/logos/logo-transparent.png" alt="logo" className="w-8" draggable={false} />
+          <img src="logos/logo-transparent.png" alt="logo" className="w-8" draggable={false} />
         </button>
 
         <button className="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">

@@ -2,6 +2,8 @@
   "name": "dream-browser",
   "private": true,
   "version": "0.0.0",
+  "author": "Ishan Shishodiya",
+  "description": "Dream Browser, a browser made to connect you with the de-centralized world and powered by DreamAI.",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
@@ -40,17 +42,30 @@
   "build": {
     "appId": "dream-browser.app",
     "productName": "Dream",
-    "directories": {
-      "output": "dist"
-    },
+    "target": "nsis",
     "win": {
       "icon": "public/logos/logo-colored.jpg"
     },
-    "mac": {
-      "icon": "public/logos/logo-colored.jpg"
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
     },
-    "linux": {
-      "icon": "public/logos/logo-colored.jpg"
-    }
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "**/*",
+      "!**/*.ts",
+      "!*.map",
+      "!package.json",
+      "!package-lock.json",
+      {
+        "from": "../dist",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   }
 }

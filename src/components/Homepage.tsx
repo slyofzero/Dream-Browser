@@ -10,14 +10,14 @@ export function HomePage() {
       style={{ backgroundImage: "/bg.jpg" }}
     >
       <img
-        src="/bg.avif"
+        src="bg.avif"
         alt="background"
         draggable={false}
         className="absolute top-0 left-0 h-full w-full -z-10 opacity-70"
       />
-      <img src="/logos/logo-text-transparent.png" alt="logo" className="w-64" draggable={false} />
+      <img src="logos/logo-text-transparent.png" alt="logo" className="w-64" draggable={false} />
       <img
-        src="/logos/logo-transparent.png"
+        src="logos/logo-transparent.png"
         alt="logo"
         className="w-24 absolute top-4 left-4"
         draggable={false}

@@ -6,28 +6,28 @@ export const urlRegex = /^https?:\/\//;
 export const shortCuts: ShortcutI[] = [
   {
     title: "X",
-    image: "/shortcuts/twitter.png",
+    image: "shortcuts/twitter.png",
     pinned: true,
   },
   {
     title: "Telegram",
-    image: "/shortcuts/telegram.png",
+    image: "shortcuts/telegram.png",
   },
   {
     title: "DexTools",
-    image: "/shortcuts/dextools.svg",
+    image: "shortcuts/dextools.svg",
   },
   {
     title: "Amazon",
-    image: "/shortcuts/amazon.png",
+    image: "shortcuts/amazon.png",
   },
   {
     title: "Binance",
-    image: "/shortcuts/binance.png",
+    image: "shortcuts/binance.png",
   },
   {
     title: "Metamask",
-    image: "/shortcuts/metamask.png",
+    image: "shortcuts/metamask.png",
   },
 ];
 
