@@ -8,6 +8,7 @@ import {
 import { SearchBox } from "@/components/SearchBox";
 import { HomeButton } from "./HomeButton";
 import { AiChat } from "@/components/AiChat";
+import { Wallet } from "@/components/Wallet";
 
 export function ToolBar() {
   return (
@@ -34,10 +35,7 @@ export function ToolBar() {
 
       <div className="flex items-center justify-end gap-6 col-span-2">
         <AiChat />
-
-        <button>
-          <img src="logos/logo-transparent.png" alt="logo" className="w-8" draggable={false} />
-        </button>
+        <Wallet />
 
         <button className="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
           <BookmarkIcon className="h-4 w-4" />

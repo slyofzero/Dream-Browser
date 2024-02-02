@@ -13,8 +13,8 @@ export function AiChat() {
       <h1 className="mx-auto select-none">DreamAI</h1>
 
       <div className="flex flex-col gap-4">
-        {aiChat.map((message) => (
-          <Message message={message} />
+        {aiChat.map((message, key) => (
+          <Message message={message} key={key} />
         ))}
 
         <div className="flex gap-1">

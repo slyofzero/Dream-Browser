@@ -1,7 +1,9 @@
 import { ITab } from "@/types/tab";
 import { atom, useAtom } from "jotai";
 
-const defaultTabs: ITab[] = [];
+const defaultTabs: ITab[] = [
+  { id: 1, title: "DexScreener", favicon: "shortcuts/dex-screener.png" },
+];
 const defaultActiveTab: ITab | null = null;
 
 const tabsAtom = atom(defaultTabs);

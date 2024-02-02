@@ -1,6 +1,7 @@
 import { useGlobalStates } from "../states";
 import { HomePage } from "./HomePage";
 import { ShowWhen } from "./ShowWhen";
+// import { SplitScreen } from "./SplitScreen";
 
 export function WebPage() {
   const { viewSrc } = useGlobalStates();
